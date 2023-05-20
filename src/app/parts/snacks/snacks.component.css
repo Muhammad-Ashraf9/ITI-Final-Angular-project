@@ -1,0 +1,31 @@
+
+.labels{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  border: 1px solid #8d1f28;
+  /* box-shadow: 0 0 20px 0 rgba(224, 22, 22, 0.2); */
+}
+h4{color: #8d1f28;}
+input:focus{
+  outline-color:#8d1f28 ;
+}
+.btn{
+  background-image: -webkit-linear-gradient(0deg,#8d1f28 0%,#000 100%);
+  color: #fff;
+  border: 0;
+  outline: none;
+
+}
+.btn:hover{
+  color: #fff;
+}
+input{
+  margin-left: 10px;
+  margin-bottom: 17px;
+}
+h5{
+  margin-left: 5px;
+  margin-bottom: 35px;
+}

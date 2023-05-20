@@ -1,0 +1,21 @@
+.logReg{
+  color: #fff;
+  background-image: -webkit-linear-gradient(0deg,#8d1f28 0%,#000 100%);
+}
+.fa-solid{
+  color:#8d1f28;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.input-group{
+  align-items: center;
+}
+
+
+.content{
+  /* border:  solid; */
+  padding: 70px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+
+}

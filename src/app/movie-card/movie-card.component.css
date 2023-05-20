@@ -1,0 +1,28 @@
+h4{
+  color: brown;
+}
+.rate{
+  display: flex;
+  align-items: center;
+}
+i{
+  color: darkorange;
+  margin-bottom: 2px;
+
+}
+.stars{
+  margin-left: 4px;
+  margin-bottom: 4px;
+}
+.card{
+  background-color: #eee;
+}
+span i {
+  color: brown;
+  
+}
+.card:hover{
+  transform: scale(1.1);
+  transition: all 1s;
+
+}

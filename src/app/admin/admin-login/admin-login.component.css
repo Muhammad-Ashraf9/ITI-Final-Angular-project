@@ -1,0 +1,31 @@
+h1{
+  color:#8d1f28;
+}
+.btn{
+  background-image: -webkit-linear-gradient(0deg,#8d1f28 0%,#000 100%);
+  color: #fff;
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translate(-50% );
+}
+.btn:hover{
+  color: #fff;
+}
+
+.link{
+  color: #8d1f28;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50% );
+
+}
+.card{
+  /* border:  solid; */
+  padding: 70px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+
+}

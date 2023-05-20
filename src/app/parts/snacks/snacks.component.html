@@ -1,0 +1,33 @@
+<div class="container mt-5">
+<!--    <form  #myform="ngForm" (ngSubmit)="selectSnacks(myform.value)" >-->
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+      <br>
+        <div class="text-center labels" *ngFor="let snack of snacks;let i=index">
+          <label><h4>{{snacks[i].name}}</h4> {{snacks[i].price}} $  :</label>
+          <input class="col-3" type="number"
+                 name={{snacks[i].name}}
+                 ngModel [(ngModel)]="snack.amount" (change)="onChange($event,i)"
+
+                 pattern="^[0-9]+[0-9]*$"><!--prevent -ev values -->
+          <!-- <label>&nbsp;{{snacks[i].name}} &nbsp; &nbsp;</label> -->
+          <!-- <label>&nbsp;Price {{snacks[i].price}} $</label> -->
+          <label>&nbsp; <h5> {{snacks[i].price*snack.amount}}$</h5></label>
+          <br>
+
+        </div>
+
+        <div class="text-center">
+          <div>
+            <h4 class="p-3">Total {{this.snacksFinal}}  $</h4>
+
+          </div>
+          <button
+            class="btn "
+            type="submit"
+            [disabled]="!f.valid">Next</button>
+
+<!--          <input type="submit"  value="Next" [disabled]="myform.invalid"> {{myform.value|json}}-->
+        </div>
+    </form>
+</div>

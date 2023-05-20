@@ -1,0 +1,32 @@
+    <div class="row justify-content-center  mt-5">
+        <div class="col-xs-12 col-md-6  content ">
+            <div *ngIf="isLoading" >
+                <app-loading-spinner ></app-loading-spinner>
+            </div>
+            <div class="alert alert-danger" *ngIf="error">
+                <p>{{error}}</p>
+            </div>
+            <form  #myform="ngForm" *ngIf="!isLoading" (ngSubmit)="onSubmit(myform)  ">
+                <div class="input-group mb-3">
+                    <label   for="email"><i class="fa-solid fa-user"></i></label>
+                    <input type="email" class="form-control" placeholder="E-mail" id="email" name="email" ngModel required email>
+                    <!-- <div>
+                        <small [hidden]="userName.valid||userName.pristine" class="text-danger">Enter a username</small>
+                    </div> -->
+                </div>
+                <div  class="mb-3 input-group" >
+                    <label for="password"><i class="fa-solid fa-lock"></i></label>
+                    <input type="password" class="form-control"  id="password" placeholder="Password" name="password" ngModel  required minlength="6">
+                    <!-- <div>
+                        <small [hidden]="userPassword.valid||userPassword.pristine" class="text-danger">Enter a password</small>
+                    </div> -->
+                </div>
+                <div  >
+                    <button  type="submit" class="btn logReg "  [disabled]="myform.invalid">{{isLogin ? 'Login': 'Register'}}</button> |
+                    <button type="button" class="btn logReg " (click)="switchLogin()">Switch to{{isLogin ? 'Register': 'Login'}}</button>
+                </div>
+
+            </form>
+        </div>
+
+</div>

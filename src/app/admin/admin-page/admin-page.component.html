@@ -1,0 +1,44 @@
+<form class="col-7 container mt-5 card" [formGroup]="addMovieForm">
+
+  <div class="text-center text-black">
+    <h1> Add Movie </h1>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEid" class="form-label">ID</label>
+    <input type="text" formControlName="id" class="form-control" id="exampleInputid" aria-describedby="idHelp">
+    <small [hidden]="id.valid" class="text-danger">Enter a ID</small>
+  </div>
+
+ <div class="mb-3">
+  <label for="exampleInputtitle1" class="form-label">title</label>
+  <input type="text" formControlName="title" class="form-control" id="exampleInputtitle1">
+  <small [hidden]="title.valid" class="text-danger">Enter a title</small>
+ </div>
+
+ <div class="mb-3">
+  <label class="form-label">description</label>
+  <input type="text" formControlName="description" class="form-control" id="exampleInputtitle1">
+  <small [hidden]="description.valid" class="text-danger">Enter a description</small>
+ </div>
+
+ <div class="mb-3">
+  <label for="exampleInputimage1" class="form-label">Image URL</label>
+  <input type="text" formControlName="image" class="form-control" id="exampleInputimage1">
+  <small [hidden]="image.valid" class="text-danger">Enter a Image URL</small>
+ </div>
+    <button type="submit" class="btn btn-primary w-25" [disabled]="!addMovieForm.valid" (click)="addNewMovie(addMovieForm.value)">Add Movie</button>
+  </form>
+
+  <form class="col-7 container mt-5 card" [formGroup]="deletMovieForm" >
+    <div class="text-center text-black">
+      <h1> Remove Movie </h1>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEid" class="form-label">ID</label>
+      <input type="text" formControlName="id2" class="form-control" id="exampleInputid" aria-describedby="idHelp">
+      <small [hidden]="id.valid" class="text-danger">Enter a ID</small>
+    </div>
+    <hr>
+    <button type="submit" class="btn btn-primary w-25" [disabled]="!deletMovieForm.valid" (click)="deletMoviebyID(id2.value)">Add Movie</button>
+  </form>

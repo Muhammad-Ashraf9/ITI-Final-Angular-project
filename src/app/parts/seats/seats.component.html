@@ -1,0 +1,54 @@
+
+<div class="movie-container" >
+
+    <ul class="showcase">
+      <li>
+        <div class="seat"></div>
+        <small>Available</small>
+      </li>
+      <li>
+        <div class="seat selected"></div>
+        <small>Selected</small>
+      </li>
+      <li>
+        <div class="seat occupied"></div>
+        <small>Occupied</small>
+      </li>
+    </ul>
+
+    <div class="container text-center">
+      <div class="screen">
+        <!-- <h4 class="mt-4 text-white">Select Your Seat</h4> -->
+      </div>
+      <div class="seatsWrapper">
+        <div  *ngFor="let seat of seats;let i=index">
+              <button  [ngClass]="seat.class" [disabled]="!seat.status" (click)="onSelect(seat.id,i)">
+                {{seat.id}}
+              </button>
+        </div>
+      </div>
+      <br>
+
+
+    </div>
+</div>
+<div>
+  <div>
+    <h5 class=" p-3 text-white text-center">Tickets: {{selectedSeats.length}}</h5>
+    <h5 class=" p-3 text-white text-center">Tickets price: {{selectedSeats.length*seats[0].price}}$</h5>
+  </div>
+  <div class="cont-btn ">
+    <button class="btn Confirm " [disabled]="!selectedSeats.length" (click)="onConfirm()">
+      Confirm
+    </button>
+    <br>
+    <button class="btn Cancel" [disabled]="selectedSeats.length  >0 ? false: true" (click)="onCancel()">
+      Cancel
+    </button>
+  </div>
+  <div>
+
+  </div>
+</div>
+
+

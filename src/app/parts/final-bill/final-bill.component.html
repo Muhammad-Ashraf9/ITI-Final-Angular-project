@@ -1,0 +1,67 @@
+
+  <div class="container">
+    <div>
+
+      <h2 class="text-center">
+        <i class="fa-solid fa-money-bill-1-wave"></i> Invoice  <i class="fa-solid fa-money-bill-1-wave"></i></h2>
+        <hr>
+
+
+    </div>
+    <hr>
+  <div class="col-6 movie">
+    <div class="movie-det">
+      <p class="title ">Movie: </p>
+    <p class="movieTitle"> &nbsp; {{movieSelected.title}} </p>
+    <!-- <img class=" ml-2" src=" https://media.elcinema.com/uploads/_315x420_1f431a4b983a6d41f374d91f29b768f927f1906e7a7afac59dc2513182e3dad6.jpg"  width="125px" height="80px" > -->
+
+    <!-- [src]="movieSelected.image" -->
+  </div>
+
+  <!-- <p>{{movieSelected.description}}</p> -->
+  </div>
+  <div class="content">
+    <div class="d-flex">
+      <h5>Day: </h5>
+      <p class="mash"> &nbsp;&nbsp; {{daySelected}}</p>
+  </div>
+  <hr>
+  <div class="d-flex">
+      <h5 >Party:</h5>
+      <p class="mash">&nbsp; &nbsp;  {{partySelected}}</p>
+  </div>
+  <hr>
+
+    <div  class=" things">
+      <h5 > Seats IDs:</h5>
+
+
+        <p  *ngFor="let id of seatsSelected">&nbsp;  <span class="mash">{{id}} &nbsp;</span>||</p>
+
+
+    </div>
+
+  <hr>
+
+  <div class="snack-container things">
+    <h5>Snacks:</h5>
+      <div *ngFor="let snack of snacksSelected | keyvalue, let i=index">
+  &nbsp; <span class="mash">{{snack.value}}</span> {{snack.key}} ||
+      </div>
+
+
+  </div>
+  <hr>
+  <div class="totalCont">
+    <h3 > Total: <span class="total">{{ticketsTotal+snacksTotal}}$</span></h3>
+
+  </div>
+  </div>
+  <div class="btns " >
+    <button class="btn btn-danger m-3" (click)="onCancel()">Cancel</button>
+    <button class="btn btn-success" (click)="onConfirm()">Confirm</button>
+  </div>
+
+
+  </div>
+

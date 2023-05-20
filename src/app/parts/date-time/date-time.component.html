@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+  <div class=" col-9 mt-5">
+    <form #dateform="ngForm" (ngSubmit)="onSubmit(dateform)">
+      <div class="date">
+        <label for="date"><i class=" fa-solid fa-calendar-days"></i></label>
+        <select class="form-select form-select-md mb-4" id="date" name="Day" [(ngModel)]="dateSelected"
+          (change)="onSelectDate($event)">
+          <option selected disabled>Choose a Date</option>
+          <option *ngFor="let day of theaterDays ;let i=index">{{day.date}}</option>
+
+        </select>
+
+      </div>
+      <!-- <div>
+       <h5> {{dateSelected}}</h5>
+      </div>
+      <div>
+       <h5> {{timeSelected}}</h5>
+      </div> -->
+      <!-- <div>
+        {{dateform.value|json}}
+      </div> -->
+      <div *ngIf="isDateSelected">
+        <label for="time"><i class="fa-solid fa-clock"></i></label>
+        <select class="form-select form-select-md mb-3" id="time" name="Party" [(ngModel)]="timeSelected"
+          (change)="onSelectTime($event)">
+          <option selected disabled>Choose a Date</option>
+          <option *ngFor="let time of theaterTimes let i=index">{{time.time}}</option>
+
+        </select>
+
+      </div>
+      <button class="btn " type="submit" [disabled]="!dateform.valid"> Next</button>
+    </form>
+  </div>
+
+</div>

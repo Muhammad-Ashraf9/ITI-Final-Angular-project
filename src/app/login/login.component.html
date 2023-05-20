@@ -1,0 +1,24 @@
+<!-- <app-navbar></app-navbar> -->
+<!-- <form class="col-7 container mt-5 card" [formGroup]="myform" (ngSubmit)="login(myform.value)"> -->
+  <div class="text-center text-white">
+    <h1>Login</h1>
+</div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div  class="form-text">We'll never share your email with anyone else.</div>
+    <small class="text-danger" *ngIf="email.dirty&&email.errors" > email is required</small>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+    <small *ngIf="password.errors?.['minlength']" class="text-danger">
+      <!-- minLength={{password.errors?.['minlength']?.['requiredLength']|json}}
+      actualLength={{password.errors?.['minlength']?.['actualLength']|json}} -->
+    </small>
+  </div>
+  <button type="submit" class="btn btn-primary w-25" [disabled]="!myform.valid" (click)="LUserdata();onSubmit()">Submit</button>
+  <br>
+  <a class="link text-white" routerLink="/register"> New user? Click to signup!!</a>
+<!-- </form> -->
+

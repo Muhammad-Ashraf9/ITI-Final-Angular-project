@@ -1,0 +1,26 @@
+form{
+  border-radius: 10px;
+  padding: 100px;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+
+}
+form:hover{
+  border-radius: 50%;
+  transition: .7s;
+}
+i{
+  margin-left: 150px;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: brown;
+}
+.btn
+{
+  margin-left: 130px;
+  background-color: brown;
+  color: #fff;
+}
+.btn:hover{
+  background-color: crimson;
+  color: #fff;
+}

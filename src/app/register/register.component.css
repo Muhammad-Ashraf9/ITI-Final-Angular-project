@@ -1,0 +1,14 @@
+.card{
+  border: none;
+  width: 800px;
+  padding: 40px;
+  background-image:linear-gradient( to left ,rgb(120, 120, 217),rgb(7, 79, 126));
+  }
+  label
+  {
+    color: aliceblue;
+  }
+  .form-text
+  {
+    color: rgb(195, 206, 215);
+  }

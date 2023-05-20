@@ -1,0 +1,28 @@
+img{
+  border-radius: 10px;
+
+}
+.box-details{
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+  margin: 20px auto;
+  padding: 10px;
+}
+.rate{
+  display: flex;
+
+}
+.stars{
+  color: darkorange;
+}
+.movieName{
+  display: flex;
+}
+hr{
+  width: 80%;
+  margin-left: 20px;
+}
+.daterel{
+  display: flex;
+}

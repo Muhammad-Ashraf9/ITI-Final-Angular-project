@@ -1,0 +1,19 @@
+<div class="card" style="cursor: pointer;" (click)="onClick()">
+  <img [src]="movie?.image" class="card-img-top" alt="..." style="height: 250px; ;">
+  <div class="card-body">
+    <h4 class="card-text"> <span><i class="fa-solid fa-clapperboard"></i></span> :: {{movie?.title}}</h4>
+    <hr>
+    <h5 class="card-title">{{movie?.description}}</h5>
+    <hr>
+    <div class="rate">
+      <h5>Rate :</h5>
+      <div class="stars">
+        <i class="fa-sharp fa-solid fa-star "></i>
+      <i class="fa-sharp fa-solid fa-star "></i>
+      <i class="fa-sharp fa-solid fa-star "></i>
+      <i class="fa-sharp fa-solid fa-star "></i>
+      <i class="fa-solid fa-star-half "></i>
+      </div>
+    </div>
+    <!-- <a [routerLink]="['/MovieDTL',movie?.id]">Next</a> -->
+  </div>
